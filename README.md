@@ -5,7 +5,7 @@ The dataset we used can be downloaded as a zipped file from [here](https://www.k
 
 ## Creating the dataset
 Line 41 to line 97 were run localy in order to create the datased for our model
-Then the folders were uploaded to google drive so that the data can be accesed from google Colab
+Then the folders were uploaded to google drive so that the data can be accesed from google Colab. The dataset should organised in test , validation,train folders, containing 9 subfolders (each representing one ou of 9 categories)each.
 
 ## Image Respository
 In lines 249 to 259 we move all the images we used from the multiple directories we created to a common one. It is the directory where based on the nearest neighbor algorithm results which we can quiry to fetch the 10 most simiral clothes.  
