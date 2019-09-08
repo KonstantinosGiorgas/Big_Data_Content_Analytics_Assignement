@@ -9,3 +9,6 @@ Then the folders were uploaded to google drive so that the data can be accesed f
 
 ## Image Respository
 In lines 249 to 259 we move all the images we used from the multiple directories we created to a common one.It is the directory were based on the nearest neighbor algorithm results which we can quiry to fetch the 10 most simiral clothes.  
+
+## Results
+Once all the code is run, libraries loaded and the model and functions initiated then function recommend_me() on line 290 will accept as input a path of an image and plot as output the most similar ones.
