@@ -289,13 +289,16 @@ print ("index response:", resp)
 
 def recommend_me(img):
   clothe = imagepreparation(img)
+  print("The image you submitted")
   plot_images(clothe)
   vec = list(np.around(np.array(imagetovec([clothe])[0].tolist()[0]),2))
   cat = int(np.argmax(model.predict(clothe)))
   cursor = collection.find({"Category": cat})
   same_cat =  pd.DataFrame(list(cursor)).iloc[:,[2,3]]
   similar = nearest_neighbors(vec, same_cat.iloc[:,1])
+  print("The 10 most similar clothes")
   for i in similar:
     plot_images(imagepreparation("/content/drive/My Drive/Colab Notebooks/testingdir/" + str(same_cat.iloc[i,0]) + ".jpg"))
 
+#for example
 recommend_me("/content/drive/My Drive/Colab Notebooks/testingdir/1163.jpg")
