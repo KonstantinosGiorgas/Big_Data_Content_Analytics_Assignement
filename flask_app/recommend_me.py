@@ -27,7 +27,7 @@ def nearest_neighbors(values, all_values, nbr_neighbors=11):
     return(idxs[0])
 
 def imagepreparation(filename):
-    np_image = np.array(np_image).astype('float32')
+    np_image = np.array(filename).astype('float32')
     np_image = transform.resize(np_image, (80, 80, 3))
     np_image = np.expand_dims(np_image, axis=0)
     return np_image
