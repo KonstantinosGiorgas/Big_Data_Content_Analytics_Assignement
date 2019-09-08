@@ -299,26 +299,3 @@ def recommend_me(img):
     plot_images(imagepreparation("/content/drive/My Drive/Colab Notebooks/testingdir/" + str(same_cat.iloc[i,0]) + ".jpg"))
 
 recommend_me("/content/drive/My Drive/Colab Notebooks/testingdir/1163.jpg")
-
-image = imagepreparation("/content/drive/My Drive/Colab Notebooks/testingdir/1653.jpg")
-
-plot_images(image)
-
-vec = list(np.around(np.array(imagetovec([image])[0].tolist()[0]),2))
-cat = int(np.argmax(model.predict(image)))
-
-print(cat, vec)
-
-# Make a query to the specific DB and Collection
-cursor = collection.find({"Category": cat})
-
-# Expand the cursor and construct the DataFrame
-df =  pd.DataFrame(list(cursor))
-df2 = df.iloc[:,[2,3]]
-
-id = nearest_neighbors(vec, df2.iloc[:,1])
-
-df2.iloc[id,0]
-
-for i in id:
-  plot_images(imagepreparation("/content/drive/My Drive/testingdir/" + str(df2.iloc[i,0]) + ".jpg"))
