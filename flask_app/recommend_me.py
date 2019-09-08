@@ -12,9 +12,10 @@ import pymongo
 from sklearn.neighbors import NearestNeighbors
 from tensorflow.keras import backend as K
 from tensorflow.keras.models import Sequential, load_model
+import flask
 from flask import request, jsonify, Flask
 
-app = Flask(__name__)
+app = Flask('__name__')
 
 #loading the model
 model = load_model('image_class_model.h5')
