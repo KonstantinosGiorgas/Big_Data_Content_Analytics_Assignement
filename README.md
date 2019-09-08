@@ -12,3 +12,6 @@ In lines 249 to 259 we move all the images we used from the multiple directories
 
 ## Results
 Once all the code is run, libraries loaded and the model and functions initiated then function recommend_me() on line 290 will accept as input a path of an image and plot as output the most similar ones.
+
+## Trained model
+You can find the model already trained in the flask_app directory ofths repository saved as a `.h5` file and load it using the `load_model('image_class_model')` command.
