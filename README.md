@@ -7,7 +7,7 @@ The dataset we used can be downloaded as a zipped file from [here](https://www.k
 Line 41 to line 97 were run localy in order to create the datased for our model
 Then the folders were uploaded to google drive so that the data can be accesed from google Colab. The dataset should organised in test , validation,train folders, containing 9 subfolders (each representing one ou of 9 categories)each.
 
-## Creating and saving t MongoDB
+## Creating features and saving them to MongoDB
 Lines 249 to 282 we are storing image category, id and vector to MongoDb. You can omit those lines and use the already stored image data to run tthe algorithm although 263-267 are needed to establish the connection.
 ## Image Respository
 In lines 249 to 259 we move all the images we used from the multiple directories we created to a common one. It is the directory where based on the nearest neighbor algorithm results which we can quiry to fetch the 10 most simiral clothes.  
