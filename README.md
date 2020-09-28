@@ -1,4 +1,4 @@
-# Big Data Content Analytics Assignement
+# Reverse Image Search Engine
 
 ## Downloading the dataset
 The dataset we used can be downloaded as a zipped file from [here](https://www.kaggle.com/paramaggarwal/fashion-product-images-small/downloads/fashion-product-images-small.zip/1).
